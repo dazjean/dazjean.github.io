@@ -1918,7 +1918,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b5ff8b;
+  background: #fff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2835,9 +2835,6 @@ pre .javascript .function {
   .sidebar {
     display: none;
   }
-}
-.sidebar-toggle {
-  display: none;
 }
 .footer-inner {
   width: 1200px;
