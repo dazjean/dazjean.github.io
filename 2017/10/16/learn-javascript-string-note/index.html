@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="//dazjean.github.io">
   <title>javascript权威指南读书笔记—字符串 | Zhang dajia的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="字符串 javascript采用utf-16编码unicode字符集，js字符串则由一组无序号的16位值组成的序列。 字符串长度字符串长度length等于组成字符串的16位值unicode序列的个数。空字符串的长度为0。一些不能使用16位unicode表示的字符也遵循utf-16的编码规则；用两个16位的unicode组成一个序列。所以长度length等于2的字符串有可能表示的是一个unicode">
+  <meta name="description" content="字符串 javascript采用utf-16编码unicode字符集，js字符串则由一组无序号的16位值组成的序列。  字符串长度 字符串长度length等于组成字符串的16位值unicode序列的个数。空字符串的长度为0。一些不能使用16位unicode表示的字符也遵循utf-16的编码规则；用两个16位的unicode组成一个序列。所以长度length等于2的字符串有可能表示的是一个unico">
 <meta name="keywords" content="-JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javascript权威指南读书笔记—字符串">
 <meta property="og:url" content="//dazjean.github.io/2017/10/16/learn-javascript-string-note/index.html">
 <meta property="og:site_name" content="Zhang dajia的博客">
-<meta property="og:description" content="字符串 javascript采用utf-16编码unicode字符集，js字符串则由一组无序号的16位值组成的序列。 字符串长度字符串长度length等于组成字符串的16位值unicode序列的个数。空字符串的长度为0。一些不能使用16位unicode表示的字符也遵循utf-16的编码规则；用两个16位的unicode组成一个序列。所以长度length等于2的字符串有可能表示的是一个unicode">
-<meta property="og:updated_time" content="2017-10-16T03:36:59.825Z">
+<meta property="og:description" content="字符串 javascript采用utf-16编码unicode字符集，js字符串则由一组无序号的16位值组成的序列。  字符串长度 字符串长度length等于组成字符串的16位值unicode序列的个数。空字符串的长度为0。一些不能使用16位unicode表示的字符也遵循utf-16的编码规则；用两个16位的unicode组成一个序列。所以长度length等于2的字符串有可能表示的是一个unico">
+<meta property="og:updated_time" content="2017-10-16T03:49:59.685Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript权威指南读书笔记—字符串">
-<meta name="twitter:description" content="字符串 javascript采用utf-16编码unicode字符集，js字符串则由一组无序号的16位值组成的序列。 字符串长度字符串长度length等于组成字符串的16位值unicode序列的个数。空字符串的长度为0。一些不能使用16位unicode表示的字符也遵循utf-16的编码规则；用两个16位的unicode组成一个序列。所以长度length等于2的字符串有可能表示的是一个unicode">
+<meta name="twitter:description" content="字符串 javascript采用utf-16编码unicode字符集，js字符串则由一组无序号的16位值组成的序列。  字符串长度 字符串长度length等于组成字符串的16位值unicode序列的个数。空字符串的长度为0。一些不能使用16位unicode表示的字符也遵循utf-16的编码规则；用两个16位的unicode组成一个序列。所以长度length等于2的字符串有可能表示的是一个unico">
   
     <link rel="alternative" href="/atom.xml" title="Zhang dajia的博客" type="application/atom+xml">
   
@@ -172,9 +172,15 @@
       
          <h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><blockquote>
 <p>javascript采用utf-16编码unicode字符集，js字符串则由一组无序号的16位值组成的序列。</p>
-<h1 id="字符串长度"><a href="#字符串长度" class="headerlink" title="字符串长度"></a>字符串长度</h1><p>字符串长度length等于组成字符串的16位值unicode序列的个数。空字符串的长度为0。<br>一些不能使用16位unicode表示的字符也遵循utf-16的编码规则；用两个16位的unicode组成一个序列。所以长度length等于2的字符串有可能表示的是一个unicode字符</p>
-<h1 id="字符串索引"><a href="#字符串索引" class="headerlink" title="字符串索引"></a>字符串索引</h1><p>字符串索引和数组一样，索引以0开始表示第一个位置，通过charAt（index）可以访问某个索引上表示的字符。</p>
-<h1 id="字符串直接量"><a href="#字符串直接量" class="headerlink" title="字符串直接量"></a>字符串直接量</h1><p>字符串直接量是单引号或者双引号括起来的字符序列。双引号或者单引号中可以包含单引号或者双引号<br><a id="more"></a><br><strong>特性</strong></p>
+</blockquote>
+<h1 id="字符串长度"><a href="#字符串长度" class="headerlink" title="字符串长度"></a>字符串长度</h1><blockquote>
+<p>字符串长度length等于组成字符串的16位值unicode序列的个数。空字符串的长度为0。<br>一些不能使用16位unicode表示的字符也遵循utf-16的编码规则；用两个16位的unicode组成一个序列。所以长度length等于2的字符串有可能表示的是一个unicode字符</p>
+</blockquote>
+<h1 id="字符串索引"><a href="#字符串索引" class="headerlink" title="字符串索引"></a>字符串索引</h1><blockquote>
+<p>字符串索引和数组一样，索引以0开始表示第一个位置，通过charAt（index）可以访问某个索引上表示的字符。</p>
+</blockquote>
+<h1 id="字符串直接量"><a href="#字符串直接量" class="headerlink" title="字符串直接量"></a>字符串直接量</h1><blockquote>
+<p>字符串直接量是单引号或者双引号括起来的字符序列。双引号或者单引号中可以包含单引号或者双引号<br><a id="more"></a><br><strong>特性</strong></p>
 <ul>
 <li>es3中规定字符串直接量必须在一行中，eg:<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var s</span> = <span class="string">'hello world'</span>;</div></pre></td></tr></table></figure>
 </li>
