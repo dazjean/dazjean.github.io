@@ -6,16 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//dazjean.github.io">
-  <title>Zhang dajia的博客</title>
+  <title>微信小程序学习笔记 | Zhang dajia的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zhang dajia的博客">
-<meta property="og:url" content="//dazjean.github.io/404.html">
+  <meta name="description" content="目录结构 一个小程序的目录结构，包含app.js,app.json,app.wxss和pages,utils等文件其中：app.js为脚本文件，在这个文件中处理小程序的生命周期函数，申明全局变量，调用框架API和定义通用函数等。">
+<meta name="keywords" content="-小程序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信小程序学习笔记">
+<meta property="og:url" content="//dazjean.github.io/2017/10/16/learn-wxapp-first/index.html">
 <meta property="og:site_name" content="Zhang dajia的博客">
-<meta property="og:updated_time" content="2017-09-29T11:41:26.487Z">
+<meta property="og:description" content="目录结构 一个小程序的目录结构，包含app.js,app.json,app.wxss和pages,utils等文件其中：app.js为脚本文件，在这个文件中处理小程序的生命周期函数，申明全局变量，调用框架API和定义通用函数等。">
+<meta property="og:updated_time" content="2017-10-16T05:00:17.106Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zhang dajia的博客">
+<meta name="twitter:title" content="微信小程序学习笔记">
+<meta name="twitter:description" content="目录结构 一个小程序的目录结构，包含app.js,app.json,app.wxss和pages,utils等文件其中：app.js为脚本文件，在这个文件中处理小程序的生命周期函数，申明全局变量，调用框架API和定义通用函数等。">
   
     <link rel="alternative" href="/atom.xml" title="Zhang dajia的博客" type="application/atom+xml">
   
@@ -147,27 +150,50 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-learn-wxapp-first" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      微信小程序学习笔记
+    </h1>
+  
+
+        
+        <a href="/2017/10/16/learn-wxapp-first/" class="archive-article-date">
+  	<time datetime="2017-10-16T04:54:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-16</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-         <!DOCTYPE HTML>
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html;charset=utf-8;">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="robots" content="all">
-  <meta name="robots" content="index,follow">
-  <link rel="stylesheet" type="text/css" href="https://qzone.qq.com/gy/404/style/404style.css">
-</head>
-<body>
-  <script type="text/plain" src="http://www.qq.com/404/search_children.js" charset="utf-8" homepageurl="/" homepagename="回到我的主页">
-  </script>
-  <script src="https://qzone.qq.com/gy/404/data.js" charset="utf-8"></script>
-  <script src="https://qzone.qq.com/gy/404/page.js" charset="utf-8"></script>
-</body>
-</html>
+         <h1 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h1><blockquote>
+<p>一个小程序的目录结构，包含app.js,app.json,app.wxss和pages,utils等文件<br>其中：<br>app.js为脚本文件，在这个文件中处理小程序的生命周期函数，申明全局变量，调用框架API和定义通用函数等。<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//app.js</span></div><div class="line">App(&#123;</div><div class="line">  onLaunch: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//调用API从本地缓存中获取数据var logs = wx.getStorageSync('logs') || []</span></div><div class="line">    logs.unshift(<span class="built_in">Date</span>.now())</div><div class="line">    wx.setStorageSync(<span class="string">'logs'</span>, logs)</div><div class="line">  &#125;,</div><div class="line">  getUserInfo:<span class="function"><span class="keyword">function</span>(<span class="params">cb</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> that = <span class="keyword">this</span>;</div><div class="line">    <span class="keyword">if</span>(<span class="keyword">this</span>.globalData.userInfo)&#123;</div><div class="line">      <span class="keyword">typeof</span> cb == <span class="string">"function"</span> &amp;&amp; cb(<span class="keyword">this</span>.globalData.userInfo)</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">      <span class="comment">//调用登录接口</span></div><div class="line">      wx.login(&#123;</div><div class="line">        success: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">          wx.getUserInfo(&#123;</div><div class="line">            success: <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</div><div class="line">              that.globalData.userInfo = res.userInfo;</div><div class="line">              <span class="keyword">typeof</span> cb == <span class="string">"function"</span> &amp;&amp; cb(that.globalData.userInfo)</div><div class="line">            &#125;</div><div class="line">          &#125;)</div><div class="line">        &#125;</div><div class="line">      &#125;);</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  globalData:&#123;</div><div class="line">    userInfo:<span class="literal">null</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>app.json为小程序配置文件，可以配置小程序的页面组成，窗口背景色，导航条样式，默认标题等。注：不能添加任何注释。<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"pages"</span>:[</div><div class="line">    <span class="string">"pages/index/index"</span>,</div><div class="line">    <span class="string">"pages/logs/logs"</span></div><div class="line">  ],</div><div class="line">  <span class="attr">"window"</span>:&#123;</div><div class="line">    <span class="attr">"backgroundTextStyle"</span>:<span class="string">"light"</span>,</div><div class="line">    <span class="attr">"navigationBarBackgroundColor"</span>: <span class="string">"#fff"</span>,</div><div class="line">    <span class="attr">"navigationBarTitleText"</span>: <span class="string">"WeChat"</span>,</div><div class="line">    <span class="attr">"navigationBarTextStyle"</span>:<span class="string">"black"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>app.wxss是整个小程序的公共样式表，我们可以像在css中定义class属性的样式一样使用app.wxss中声明的样式规则。</p>
+<h1 id="页面结构"><a href="#页面结构" class="headerlink" title="页面结构"></a>页面结构</h1><blockquote>
+<p>每一个小程序页面是由同路径下同名的四个不同后缀文件的组成，如：index.js、index.wxml、index.wxss、index.json。.js后缀的文件是脚本文件，.json后缀的文件是配置文件，.wxss后缀的是样式表文件，.wxml后缀的文件是页面结构文件。<br>*指定小程序的首页，默认app.json中的pages中的第一项为小程序的首页。</p>
+</blockquote>
+<p>总的来说，小程序由三个部分组成:配置，逻辑，和视图</p>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><blockquote>
+<p><em>.json文件为配置文件，主要配置当前小程序的基本信息，比如tab，标题，背景，导航样式等信息。<br>其中，page.json为全局配置，在page中也有相应的.json,对于同属性配置页面级覆盖page.json<br>逻辑：
+</em>.js文件为逻辑层，逻辑层将数据进行处理后发送给视图层，同时接受视图层的事件反馈。 在 JavaScript 的基<br>础上，我们做了一些修改，以方便地开发小程序。</p>
+<pre><code>- 增加 App 和 Page 方法，进行程序和页面的注册。
+- 增加 getApp 和 getCurrentPages 方法，分别用来获取 App 实例和当前页面栈。
+- 提供丰富的 API，如微信用户数据，扫一扫，支付等微信特有能力。
+- 每个页面有独立的作用域，并提供模块化能力。
+- 由于框架并非运行在浏览器中，所以 JavaScript 在 web 中一些能力都无法使用，如 document，window 等。
+- 开发者写的所有代码最终将会打包成一份 JavaScript，并在小程序启动的时候运行，直到小程序销毁。类似 ServiceWorker，所以逻辑层也称之为 App Service。
+</code></pre><h1 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h1><p><em>.WXML 与 </em>.WXSS<br>框架的视图层由 WXML 与 WXSS 编写，由组件来进行展示。<br>将逻辑层的数据反应成视图，同时将视图层的事件发送给逻辑层。<br>WXML(WeiXin Markup language)用于描述页面的结构。<br>WXSS(WeiXin Style Sheet)用于描述页面的样式。<br>组件(Component)是视图的基本组成单元。</p>
+</blockquote>
+<h1 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h1><blockquote>
+<p><a href="">项目地址</a></p>
+</blockquote>
+
       
 
       
@@ -206,6 +232,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">-小程序</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -256,7 +293,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://dazjean.github.io/404.html" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://dazjean.github.io/2017/10/16/learn-wxapp-first/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -268,6 +305,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2017/10/16/learn-javascript-string-note/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">javascript权威指南读书笔记—字符串</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -289,7 +336,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#目录结构"><span class="toc-number">1.</span> <span class="toc-text">目录结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#页面结构"><span class="toc-number">2.</span> <span class="toc-text">页面结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置"><span class="toc-number">3.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#视图"><span class="toc-number">4.</span> <span class="toc-text">视图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#demo"><span class="toc-number">5.</span> <span class="toc-text">demo</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -314,7 +361,7 @@
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "//dazjean.github.io/404.html",
+  id: "//dazjean.github.io/2017/10/16/learn-wxapp-first/",
   owner: 'dazjean',
   repo: 'dazjean.github.io',
   oauth: {
@@ -347,7 +394,7 @@ gitment.render('gitment-ctn')
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
